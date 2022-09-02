@@ -1,0 +1,140 @@
+﻿<Window 
+    x:Class="TerminalRbkm.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" mc:Ignorable="d"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:TerminalRbkm"
+    xmlns:config="clr-namespace:TerminalRbkm.Properties"
+    xmlns:convertors="clr-namespace:Adapter.Convertors;assembly=Adapter"
+    Closing="Window_Closing" Topmost="False" BorderBrush="Black" WindowStartupLocation="CenterScreen" Name="MWindow"  WindowState="Maximized">
+    <Window.Resources>
+        <!--<convertors:ConvertoDate x:Key="ConvertoDate"></convertors:ConvertoDate>
+        <convertors:ConvertoTime x:Key="ConvertoTime"></convertors:ConvertoTime>-->
+    </Window.Resources>
+
+    <Grid x:Name="GridTemp" Background="{StaticResource BackgroundBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="36"/>
+            <RowDefinition Height="227*" />
+            <RowDefinition Height="24" />
+        </Grid.RowDefinitions>
+        <Menu BorderBrush="#FF121314" Visibility="Visible" Name="MenuMain">
+            <MenuItem Header="{DynamicResource m_MnitMainConnections}"  AllowDrop="True" Foreground="White" >
+                <MenuItem Name="MenuItemRunConnect" Header="{DynamicResource m_MnitMainConnect}" Click="BtnConnect_Click" 
+                          Style="{StaticResource Key_MenuItemStyle}">
+                    <!--"-->
+                </MenuItem>
+
+                <MenuItem Name="MenuItemRunDisconnect"  Header="{DynamicResource m_MnitMainDisconnect}" Click="BtnDisconnect_Click" 
+                           Style="{StaticResource KeyDisable_MenuItemStyle}" IsEnabled="False" />
+
+                <Separator></Separator>
+                <MenuItem Foreground="Black" Header="{DynamicResource m_MnitMainSettingTerminals}" Command="{Binding OpenNewTabCommand}" CommandParameter="{DynamicResource m_MnitMainSettingTerminals}"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Foreground="Black" Header="{DynamicResource m_MnitMainExit}"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="{DynamicResource m_MnitMainTools}" x:Name="Tools" Foreground="White">
+
+                <MenuItem Foreground="Black" Name="MniDataManager" Header="{DynamicResource m_MnitMainSourceData}" Command="{Binding OpenNewTabCommand}">
+                    <MenuItem.Icon>
+                        <Image Width="16" Height="16" Source="pack://application:,,,/StyleAndControls;component/Images/SourceData.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="{DynamicResource m_MnitMainStoragesData}" x:Name="StorageHistory"  Command="{Binding OpenNewTabCommand}" Foreground="Black">
+                    <MenuItem.Icon>
+                        <Image Width="16" Height="16" Source="pack://application:,,,/StyleAndControls;component/Images/StorageData.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+
+            </MenuItem>
+
+            <MenuItem Header="{DynamicResource m_MnitMainTables}" Name="Tables" Foreground="White">
+
+                <MenuItem Foreground="Black" IsEnabled="True" Header="{DynamicResource m_MnitMainTableCurrentParam}" Command="{Binding OpenNewTabCommand}" CommandParameter="{DynamicResource m_MnitMainTableCurrentParam}"/>
+                <Separator></Separator>
+                <MenuItem Foreground="Black" IsEnabled="True" Header="{DynamicResource m_MnitMainTablePositionShare}" Command="{Binding OpenNewTabCommand}" CommandParameter="{DynamicResource m_MnitMainTablePositionShare}"/>
+                <MenuItem Foreground="Black" IsEnabled="True" Header="{DynamicResource m_MnitMainTablePositionFutures}" Command="{Binding OpenNewTabCommand}" CommandParameter="{DynamicResource m_MnitMainTablePositionFutures}"/>
+                <MenuItem Foreground="Black" IsEnabled="True" Header="{DynamicResource m_MnitMainTableLimitsOnShares}" Command="{Binding OpenNewTabCommand}" CommandParameter="{DynamicResource m_MnitMainTableLimitsOnShares}"/>
+                <Separator></Separator>
+                <MenuItem Foreground="Black" IsEnabled="True" Header="{DynamicResource m_MnitMainTableDeals}" Command="{Binding OpenNewTabCommand}" CommandParameter="{DynamicResource m_MnitMainTableDeals}"/>
+                <MenuItem Foreground="Black" IsEnabled="True" Header="{DynamicResource m_MnitMainTableOrders}" Command="{Binding OpenNewTabCommand}" CommandParameter="{DynamicResource m_MnitMainTableOrders}"/>
+                <MenuItem Foreground="Black" IsEnabled="True" Header="{DynamicResource m_MnitMainTableStopOrders}" Command="{Binding OpenNewTabCommand}" CommandParameter="{DynamicResource m_MnitMainTableStopOrders}" />
+
+                <Separator></Separator>
+                <MenuItem Foreground="Black" IsEnabled="True" Header="Стакан" Click="OpenStakan"/>
+                <Separator></Separator>
+
+            </MenuItem>
+
+            <MenuItem Header="{DynamicResource m_MnitMainSetting}" Foreground="White">
+                <MenuItem Name="MenuItemLogFolder" Foreground="Black" Header="{DynamicResource m_MnitMainSettingOpenFolderWithLogs}" Click="MenuItem_LogFolder_Click"></MenuItem>
+            </MenuItem>
+
+            <Menu.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF455565" Offset="0" />
+                    <GradientStop Color="#FF3A4757" Offset="1" />
+                </LinearGradientBrush>
+            </Menu.Background>
+        </Menu>
+
+
+        <TabControl Grid.Row="3" Background="LightGray" ItemsSource="{Binding Tabs}" SelectedItem="{Binding SelectedTab, Mode=TwoWay}">
+            <TabControl.ItemContainerStyle>
+                <Style TargetType="TabItem">
+                    <Setter Property="HeaderTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock x:Name="headerTxt" Text="{Binding Header}" />
+                                    <Image Source="red_x_press.png" Width="18" Height="18" Margin="5 0 0 0">
+                                        <Image.InputBindings>
+                                            <MouseBinding Gesture="LeftClick" Command="{Binding DataContext.CloseTabCommand, RelativeSource={RelativeSource AncestorType=Window}}" CommandParameter="{Binding ElementName=headerTxt, Path=Text}" />
+                                        </Image.InputBindings>
+                                    </Image>
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.ItemContainerStyle>
+
+            <TabControl.ContentTemplate>
+                <DataTemplate>
+                    <UserControl Content="{Binding Content}" />
+                </DataTemplate>
+            </TabControl.ContentTemplate>
+        </TabControl>
+
+        <Grid Grid.Row="2" HorizontalAlignment="Left" Width="80" Name="GridConnection" >
+
+            <Button ToolTip="Установить соединение" Foreground="White" HorizontalAlignment="Left" Margin="8,2,0,2" Name="BtnConnect"  Width="26" Command="{Binding ConnectCommand}" Height="26" Style="{StaticResource KeyCoonnect_ButtonStyle}" />
+            <Button Foreground="White" Height="26" HorizontalAlignment="Left" Margin="40,5,0,5" Name="BtnDisconnect" ToolTip="Разорвать соединение" Width="26"  Click="BtnDisconnect_Click" Style="{StaticResource KeyDiscoonnect_ButtonStyle}" IsEnabled="False" />
+        </Grid>
+
+        <TextBox Height="23" Margin="275,7,10,0" x:Name="TxbxStatus" VerticalAlignment="Top" Grid.Row="2" />
+        <StackPanel Grid.Row="4" Orientation="Horizontal">
+            <Label Content="Статус соединения:" Grid.Row="3" Height="26" HorizontalAlignment="Left" Margin="8,0,0,0" Name="LblStatusConnected" VerticalAlignment="Bottom" Foreground="DarkOrange" Grid.RowSpan="2" MouseLeftButtonDown="LblAdapter_OnMouseLeftButtonDown" />
+
+            <!--Content="{Binding Source={x:Static config:Settings.Default}, Path=adapter}"-->
+            <Label Content="TO DO!" Grid.Row="3" Height="26" HorizontalAlignment="Left" Margin="0,-2,0,0" x:Name="LblTypeAdapter" VerticalAlignment="Bottom" Foreground="DarkOrange" Grid.RowSpan="2" Width="Auto" MouseLeftButtonDown="LblAdapter_OnMouseLeftButtonDown"/>
+            <Label Height="26" HorizontalAlignment="Left"  Name="LblCommonTimeJob" Content="" VerticalAlignment="Bottom" Foreground="White" >
+                <Label.ToolTip>
+                    <ToolTip>
+                        <DockPanel Width="250">
+                            <TextBlock TextWrapping="Wrap"><Run Text="Время выполнения всех скриптов, роботов и модулей, млсек и объем памяти занимаемый приложением"/></TextBlock>
+                        </DockPanel>
+                    </ToolTip>
+                </Label.ToolTip>
+            </Label>
+
+        </StackPanel>
+        <Label Foreground="White" Margin="0,0,10,0" Padding="3" Grid.Row="4" Name="LblTime" VerticalContentAlignment="Top" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Width="290" Content="" />
+
+    </Grid>
+</Window>

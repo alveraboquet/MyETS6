@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="StyleAndControls.Controls.ViewForOtimParam.ItemLbxTxbxDateTime"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:StyleAndControls.Controls"
+
+             mc:Ignorable="d"
+	x:Name="UserControl" Height="28" Width="250">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid>
+            <controls:MyMaskedTextBox Mask="00:00:00"  Margin="130,2.5,0,2.5" TextWrapping="Wrap" HorizontalAlignment="Left" Width="120" Height="23" VerticalAlignment="Top" x:Name="Txbx"/>
+            <TextBlock Cursor="Help" Foreground="White" Height="17" HorizontalAlignment="Left" Name="Txbl" VerticalAlignment="Top" Width="120" Margin="0,5.5,0,0" >
+                <TextBlock.ToolTip>
+                    <ToolTip>
+                        <DockPanel Width="250" >
+                            <TextBlock TextWrapping="Wrap" Name="TxblToolTip"></TextBlock>
+                        </DockPanel>
+                    </ToolTip>
+                </TextBlock.ToolTip> 
+			</TextBlock>
+        </Grid>
+    </Grid>
+</UserControl>

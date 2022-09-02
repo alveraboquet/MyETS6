@@ -1,0 +1,89 @@
+﻿<UserControl
+    x:Class="TerminalRbkm.View.TerminalSettingNew"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:convertors="clr-namespace:Adapter.Convertors;assembly=Adapter">
+
+    <UserControl.Resources>
+        <convertors:ColorConverterStatusConnection  x:Key="ColorConverter"></convertors:ColorConverterStatusConnection>
+        <Style x:Key="IdColor" TargetType="{x:Type DataGridCell}">
+            <Setter Property="Foreground" Value="{Binding ColorStatusConnection, Converter={StaticResource ColorConverter}}" />
+        </Style>
+    </UserControl.Resources>
+
+
+    <Grid Background="#FF3D4E60" Name="GridCommon" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="200*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300*" />
+        </Grid.ColumnDefinitions>
+        
+        
+        <Menu Grid.Row="0"  Margin="5,0,0,2" Background="#FF415161" Foreground="White" HorizontalAlignment="Left" Width="26" Height="26">
+
+            <MenuItem Header=""  Width="26" Height="26">
+                <MenuItem.Icon>
+                    <Image Width="20" Height="20" Source="pack://application:,,,/StyleAndControls;component/Images/add.png" />
+                </MenuItem.Icon>
+                <MenuItem  Header="Quik" Foreground="Black" Click="BtnAddRow_Click" />
+                <MenuItem  Header="TransaqConnector" Foreground="Black" Click="BtnAddRow_Click" />
+                <MenuItem  Header="Plaza II" Foreground="Black" Click="BtnAddRow_Click" Visibility="Collapsed"/>
+                <MenuItem  Header="IB TWS" Foreground="Black" Click="BtnAddRow_Click" />
+                <MenuItem  Header="Крипторынки" Foreground="Black" Click="BtnAddRow_Click" Name="MnitCryptoConnectors" Visibility="Visible"/>
+                <MenuItem  Header="Пользовательские коннекторы" Foreground="Black" Click="BtnAddRow_Click" Name="MnitUserConnectors" Visibility="Collapsed"/>
+            </MenuItem>
+        </Menu>
+        <Button Grid.Row="0" HorizontalAlignment="Left" Margin="29,4,0,3" x:Name="BtnDelw" Width="27" Height="24" ToolTip="Удалить выделенную сторку"  Click="BtnDel_Click" Style="{StaticResource DeleteRowButtonStyle}"/>
+        <DataGrid  Grid.Row="1" AutoGenerateColumns="False" Margin="0,0,0,0" x:Name="DtgdTerminals" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="#FF4E7294" IsReadOnly="true" 
+							CanUserSortColumns="False" BorderBrush="#FF4167A3" MouseDoubleClick="DtgdTerminals_OnMouseDoubleClick" SelectionMode="Single" Padding="0" 
+							VerticalContentAlignment="Center" ItemsSource="{Binding}" Grid.RowSpan="3">
+            <DataGrid.ContextMenu>
+                <ContextMenu >
+                    <MenuItem Name="MnitAddQuikw" Header="Добавить подключение" Click="BtnAddRow_Click" Height="20" Padding="0">
+                        <MenuItem.Icon>
+                            <Image Width="12" Height="12" Source="pack://application:,,,/StyleAndControls;component/Images/add.png" />
+                        </MenuItem.Icon>
+                        <MenuItem  Header="Quik" Foreground="Black" Click="BtnAddRow_Click" />
+                        <MenuItem  Header="TransaqConnector" Foreground="Black" Click="BtnAddRow_Click" />
+                        <MenuItem  Header="Plaza II" Foreground="Black" Click="BtnAddRow_Click" Visibility="Collapsed"/>
+                        <MenuItem  Header="IB TWS" Foreground="Black" Click="BtnAddRow_Click" />
+                        <MenuItem  Header="IqFeed" Foreground="Black" Click="BtnAddRow_Click" Visibility="Collapsed"/>
+                    </MenuItem>
+                    <MenuItem Name="MnitEditQuikq" Header="Редактировать" Click="MnitEditQuik_OnClick"  Height="20" Padding="1"></MenuItem>
+                    <MenuItem Name="MnitDelQuikq" Header="Удалить подключение" Click="MnitDel_Click" Height="20" Padding="1">
+                        <MenuItem.Icon>
+                            <Image Width="12" Height="12" Source="pack://application:,,,/StyleAndControls;component/Images/del.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+
+            <DataGrid.Columns >
+
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}" CellStyle="{StaticResource IdColor}"/>
+                <DataGridTextColumn Header="Терминал" Binding="{Binding Terminal}" CellStyle="{StaticResource IdColor}"/>
+                <DataGridTemplateColumn IsReadOnly="True" Header="Использование">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox  IsChecked="{Binding IsUse, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource IsRunCheckWithContentBoxStyle}" PreviewMouseDown="UIElement_OnPreviewMouseDown">
+                                <CheckBox.ToolTip>
+                                    <TextBlock Text="Соединение с терминалом"></TextBlock>
+                                </CheckBox.ToolTip>
+                            </CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Комментарий" Binding="{Binding Comment}" CellStyle="{StaticResource IdColor}"/>
+                <DataGridTextColumn Header="Счета" Binding="{Binding AccountsString}" />
+
+                <DataGridTextColumn Header="Дополнительно" Binding="{Binding AddInfo}" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

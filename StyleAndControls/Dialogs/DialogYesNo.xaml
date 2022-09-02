@@ -1,0 +1,32 @@
+﻿<Window x:Class="ClassControlsAndStyle.Dialogs.DialogYesNo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DialogYesNo" Padding="5" 
+        ResizeMode="NoResize" 
+        mc:Ignorable="d" Topmost="True"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        d:DesignHeight="99" Width="300" MaxHeight="300"  SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" >
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="Background1" EndPoint="1,0.5" StartPoint="0,0.5">
+                <GradientStop Color="#FFE97E0F" Offset="0" />
+                <GradientStop Color="#FFFFD300" Offset="1" />
+            </LinearGradientBrush>
+
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="#FF5D6D7D">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="33" />
+        </Grid.RowDefinitions>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <TextBlock Name="MsgBox" MaxHeight="300" Padding="12,5" Text="" Foreground="Black" TextAlignment="Center" TextWrapping="Wrap"/>
+        </ScrollViewer>
+        <Button Content="Да" Grid.Row="1" Height="23" Margin="0,0,65,5" Name="BtnYes" HorizontalAlignment="Right" Width="47" Foreground="#FF2F2F2F" Background="{StaticResource Background1}" IsDefault="True" Click="BtnYes_Click" VerticalAlignment="Bottom" />
+        <Button Content="Нет" Height="23" Margin="0,0,10,5" Name="BtnNo" Grid.Row="1" HorizontalAlignment="Right" Width="49" Background="{StaticResource Background1}"  Foreground="#FF2F2F2F" Click="BtnNo_Click" IsCancel="True" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="StyleAndControls.Controls.ViewForOtimParam.ItemLbxCmbxSymbol"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+            x:Name="UserControl" Height="28" Width="490">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid>
+            <ComboBox Margin="130,2.5,0,2.5" HorizontalAlignment="Left" Width="120" Height="23" VerticalAlignment="Top" Name="CmbxSymbol"/>
+            <TextBlock Cursor="Help" Foreground="White" Height="17" HorizontalAlignment="Left" Text="Инструмент" VerticalAlignment="Top" Width="120" Margin="0,5.5,0,0" >
+            </TextBlock>
+
+            <ComboBox Margin="370,2.5,0,2.5" HorizontalAlignment="Left" Width="120" Height="23" VerticalAlignment="Top" Name="CmbxClasscode" SelectionChanged="CmbxClasscode_SelectionChanged"/>
+            <TextBlock Cursor="Help" Foreground="White" Height="17" HorizontalAlignment="Left" Text="Класс" VerticalAlignment="Top" Width="120" Margin="260,5.5,0,0" >
+
+            </TextBlock>
+            <ComboBox Margin="130,30,0,0" HorizontalAlignment="Left" Width="120" Height="23" VerticalAlignment="Top" x:Name="CmbxClientCode"/>
+            <TextBlock Cursor="Help" Foreground="White" Height="17" HorizontalAlignment="Left" Text="Счет" VerticalAlignment="Top" Width="120" Margin="0,33,0,0" />
+        </Grid>
+    </Grid>
+</UserControl>

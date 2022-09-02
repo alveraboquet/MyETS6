@@ -1,0 +1,25 @@
+﻿<UserControl 
+    x:Class="TerminalRbkm.View.Table.TableMessages"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:convertors="clr-namespace:Adapter.Convertors;assembly=Adapter">
+
+    <UserControl.Resources>
+        <convertors:ConvertoDate x:Key="ConvertoDate" />
+        <convertors:ConvertoTime x:Key="ConvertoTime" />
+    </UserControl.Resources>
+
+    <Grid>
+        <DataGrid Name="ListBoxLogs" HorizontalGridLinesBrush="{x:Null}"  AutoGenerateColumns="False" FrozenColumnCount="3"
+                           VerticalGridLinesBrush="#FF4E7294" IsReadOnly="True" Margin="0,0,0,0" VerticalContentAlignment="Stretch">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="№" Binding="{Binding NumberMessage}" />
+                <DataGridTextColumn IsReadOnly="True" Header="Дата" Binding="{Binding DateTimeMessage, Converter={StaticResource ConvertoDate}}" />
+                <DataGridTextColumn IsReadOnly="True" Header="Время" Binding="{Binding DateTimeMessage, Converter={StaticResource ConvertoTime}}" />
+                <DataGridTextColumn Header="Сообщение" Binding="{Binding Message}" />
+                <DataGridTextColumn Header="Счет" Binding="{Binding ClientCode}" />
+                <DataGridTextColumn Header="Название" Binding="{Binding NameRobot}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

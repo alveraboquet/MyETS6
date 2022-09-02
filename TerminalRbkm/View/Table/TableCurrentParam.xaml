@@ -1,0 +1,53 @@
+﻿<UserControl 
+    x:Class="TerminalRbkm.View.Table.TableCurrentParam"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:convertors="clr-namespace:Adapter.Convertors;assembly=Adapter">
+
+    <UserControl.Resources>
+        <convertors:ConvertoDate x:Key="ConvertoDate" />
+        <convertors:ConvertoTime x:Key="ConvertoTime" />
+    </UserControl.Resources>
+    
+    <Grid Background="{StaticResource BackgroundBrush}">
+        <DataGrid IsReadOnly="False" AutoGenerateColumns="False" Name="dtgdSecurities" ItemsSource="{Binding CurrentParams}"
+                  HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="#FF4E7294" CanUserAddRows="False" CanUserDeleteRows="False" 
+                  GridLinesVisibility="Vertical" IsSynchronizedWithCurrentItem="{x:Null}" 
+                   RowHeaderWidth="0" FrozenColumnCount="1" MouseDoubleClick="DtgdSecurities_OnMouseDoubleClick">
+            <!---->
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <!--Click="MnitNewOrder_OnClick"-->
+                    <MenuItem Name="MnitNewOrder" Header="Новая заявка" Height="20" Padding="1" Command="{Binding NewOrderCommand}"></MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Header="Инструмент" Binding="{Binding Seccode}"  ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Код класса" Binding="{Binding ClassCode}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Посл. цена" Binding="{Binding LastPrice, StringFormat=########0.### ### ### ### ### ###}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Цена спроса" Binding="{Binding Bid, StringFormat=####0.###################}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Цена предложения" Binding="{Binding Offer, StringFormat=####0.###################}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Макс. цена" Binding="{Binding MaxPrice, StringFormat=####0.###################}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Мин. цена" Binding="{Binding MinPrice, StringFormat=####0.###################}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Цена закрытия" Binding="{Binding ClosePrice, StringFormat=####0.###################}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Цена открытия" Binding="{Binding OpenPrice, StringFormat=####0.###################}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="ГО продавца" Binding="{Binding GoSell, StringFormat=####0.###################}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="ГО покупателя" Binding="{Binding GoBuy, StringFormat=####0.###################}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Статус сессии" Binding="{Binding TradingStatus}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Статус инструмента" Binding="{Binding Status}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Размер лота" Binding="{Binding LotSize, StringFormat=####0.###################}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Стоимость шага цены" Binding="{Binding PointCost, StringFormat=####0.###################}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Шаг цены" Binding="{Binding MinStep, StringFormat=####0.###################}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Точность" Binding="{Binding Accuracy}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Посл. изм." Binding="{Binding TimeLastChange, Converter={StaticResource ConvertoTime}}" />
+                <DataGridTextColumn IsReadOnly="True" Header="Торговля" Binding="{Binding IsTrade}" />
+                <DataGridTextColumn IsReadOnly="True" Header="Баз. актив" Binding="{Binding BaseActive}" />
+                <DataGridTextColumn IsReadOnly="True" Header="Мин. сумма" Binding="{Binding MinNational, StringFormat=####0.###################}" />
+                <DataGridTextColumn IsReadOnly="True" Header="Мин. лот" Binding="{Binding MinAmount, StringFormat=####0.###################}" />
+                <DataGridTextColumn IsReadOnly="True" Header="Макс. лот" Binding="{Binding MaxAmount, StringFormat=####0.###################}" />
+                <DataGridTextColumn IsReadOnly="True" Header="Дата экспирации" Binding="{Binding DateExpire}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

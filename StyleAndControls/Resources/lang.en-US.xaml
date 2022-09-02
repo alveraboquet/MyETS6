@@ -1,0 +1,208 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- Main window -->
+    <v:String x:Key="m_MnitMainConnections">Connection</v:String>
+    <v:String x:Key="m_MnitMainConnect">Connect</v:String>
+    <v:String x:Key="m_MnitMainDisconnect">Disconnect</v:String>
+    <v:String x:Key="m_MnitMainExit">Exit</v:String>
+    <v:String x:Key="m_MnitMainTools">Tools</v:String>
+    <v:String x:Key="m_MnitMainStratetgies">Strategies</v:String>
+    <v:String x:Key="m_MnitMainManageRobots">Control of robots</v:String>
+    <v:String x:Key="m_MnitMainManageScaners">Control of scaners</v:String>
+    <v:String x:Key="m_MnitMainRobotsPortfel">Portfolios of robots</v:String>
+    <v:String x:Key="m_MnitMainTesting">Testing</v:String>
+    <v:String x:Key="m_MnitMainPortfelTesting">Portfolio testing</v:String>
+    <v:String x:Key="m_MnitMainSourceData">Data source</v:String>
+    <v:String x:Key="m_MnitMainStoragesData">Data storage</v:String>
+    <v:String x:Key="m_MnitMainModuls">Moduls</v:String>
+    <v:String x:Key="m_MnitMainTables">Tables</v:String>
+    <v:String x:Key="m_MnitMainTableCurrentParam">Table of the current parameters</v:String>
+    <v:String x:Key="m_MnitMainTablePositionShare">Table of positions on shares</v:String>
+    <v:String x:Key="m_MnitMainTablePositionFutures">Table of positions on futures</v:String>
+    <v:String x:Key="m_MnitMainTableLimitsOnShares">Table of limits of shares</v:String>
+    <v:String x:Key="m_MnitMainTableimitsOnFutures">Table of limits of futures</v:String>
+    <v:String x:Key="m_MnitMainTableDeals">Table of deals</v:String>
+    <v:String x:Key="m_MnitMainTableOrders">Table of orders</v:String>
+    <v:String x:Key="m_MnitMainTableStopOrders">Table of stop orders</v:String>
+    <v:String x:Key="m_MnitMainTableGlass">Glass</v:String>
+    <v:String x:Key="m_MnitMainTableNotice">Notices</v:String>
+    <v:String x:Key="m_MnitMainSetting">Setting</v:String>
+    <v:String x:Key="m_MnitMainSettingBase">Basically</v:String>
+    <v:String x:Key="m_menu_Language">Language</v:String>
+    <v:String x:Key="m_MnitMainSettingTerminals">Terminals</v:String>
+    <v:String x:Key="m_MnitMainSettingSaveSetting">Save setting</v:String>
+    <v:String x:Key="m_MnitMainSettingManageLicense">Controls license</v:String>
+    <v:String x:Key="m_MnitMainSettingCheckLicense">Check license</v:String>
+    <v:String x:Key="m_MnitMainSettingOpenFolderWithLogs">Open folder logs</v:String>
+    <v:String x:Key="m_MnitMainSettingOpenFolderWithStratetgies">Open folder stratetgies</v:String>
+    <v:String x:Key="m_MnitMainHelp">Help</v:String>
+    <v:String x:Key="m_MnitMainHelpInstruction">Instruction</v:String>
+    <v:String x:Key="m_MnitMainHelpInstructionOnline">Instruction online</v:String>
+    <v:String x:Key="m_MnitMainHelpComplaintsAndOffers">Complaints and Offers</v:String>
+    <v:String x:Key="m_MnitMainHelpCheckUpdate">Check update</v:String>
+    <v:String x:Key="m_MnitMainHelpAbout">About</v:String>
+
+    <!--#region Роботы -->
+
+    <v:String x:Key="robotMainWinOpenPos_OpenPos">Open position</v:String>
+    <v:String x:Key="robotMainWinLogs">Logs</v:String>
+    <v:String x:Key="robotMainWinLogsStratetgy">Logs stratetgy</v:String>
+    <v:String x:Key="robotMainWinDeals">Deals</v:String>
+    <v:String x:Key="robotMainWinDayStatistic">Day statistic</v:String>
+
+    <!--#region меню -->
+
+    <v:String x:Key="robotMainWinMenu_StartCheckRobots">Start check robots</v:String>
+    <v:String x:Key="robotMainWinMenu_StopCheckRobots">Stop check robots</v:String>
+    <v:String x:Key="robotMainWinMenu_AddRobotEdit">Add/Edit robot</v:String>
+    <v:String x:Key="robotMainWinMenu_CopyRobots">Copy robots</v:String>
+    <v:String x:Key="robotMainWinMenu_DelRobots">Delete robots</v:String>
+    <v:String x:Key="robotMainWinMenu_Chart">Chart</v:String>
+    <v:String x:Key="robotMainWinMenu_Version">Version:</v:String>
+    <v:String x:Key="robotMainWinMenu_AllPosHistory">Convert to historical position</v:String>
+    <v:String x:Key="robotMainWinMenu_AllPosReal">Convert to real position</v:String>
+    <v:String x:Key="robotMainWinMenu_ClearPos">Clear position</v:String>
+    <v:String x:Key="robotMainWinMenu_ClearPosAndStop">Clear position and stop</v:String>
+    <v:String x:Key="robotMainWinMenu_KillAndClose">Kill and close</v:String>
+    <v:String x:Key="robotMainWinMenu_KillAndCloseAndStop">Kill, close and stop</v:String>
+    <v:String x:Key="robotMainWinMenu_GroupAction">Group action</v:String>
+
+    <!--#endregion-->
+
+    <!--#region меню -->
+
+    <v:String x:Key="robotMainWinContextMenu_AddRobot">Add robot</v:String>
+    <v:String x:Key="robotMainWinContextMenu_EditRobot">Edit robot</v:String>
+    <v:String x:Key="robotMainWinContextMenu_CopyRobot">Copy robot</v:String>
+    <v:String x:Key="robotMainWinContextMenu_DelRobot">Delete robot</v:String>
+
+    <!--#endregion-->
+
+
+    <!--#region Роботы главное окно -->
+
+    <v:String x:Key="robotMainWin_onOff">On/Off</v:String>
+    <v:String x:Key="robotMainWin_Name">Name</v:String>
+    <v:String x:Key="robotMainWin_Instr">Symbol</v:String>
+    <v:String x:Key="robotMainWin_Price">Price</v:String>
+    <v:String x:Key="robotMainWin_LastChange">Last change</v:String>
+    <v:String x:Key="robotMainWin_Pos">Position</v:String>
+    <v:String x:Key="robotMainWin_ProfitLoss">P/L</v:String>
+    <v:String x:Key="robotMainWin_ProfitLossFact">P/L (fact)</v:String>
+    <v:String x:Key="robotMainWin_Deals">Deals</v:String>
+    <v:String x:Key="robotMainWin_Portfel">Portfel</v:String>
+    <v:String x:Key="robotMainWin_ClientCode">Account</v:String>
+    <v:String x:Key="robotMainWin_RegimTorg">Regim trade</v:String>
+    <v:String x:Key="robotMainWin_TypeTorg">Type trade</v:String>
+    <v:String x:Key="robotMainWin_Qty">Qty</v:String>
+    <v:String x:Key="robotMainWin_TrubleRobot">Trouble robot</v:String>
+
+
+    <!--#endregion-->
+
+    <!--#region Открытые позиции -->
+
+    <v:String x:Key="robotMainWinOpenPos_Type">Type</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Date">Date</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Time">Time</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Operation">Operation</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Lots">Qty</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Filled">Filled</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Status">Status</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Number">Number</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Price">Price</v:String>
+    <v:String x:Key="robotMainWinOpenPos_TrallingProfit">Tralling profit</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Active">Active</v:String>
+    <v:String x:Key="robotMainWinOpenPos_PriceActivation">Price activation</v:String>
+    <v:String x:Key="robotMainWinOpenPos_PriceMinMax">Price min/max</v:String>
+    <v:String x:Key="robotMainWinOpenPos_PriceFilled">Price filled</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Close">Close</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Profit">Profit</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Stop">Stop</v:String>
+    <v:String x:Key="robotMainWinOpenPos_AddInfo">Info</v:String>
+
+    <!--#endregion-->
+
+
+
+    <!--#region Журнал -->
+
+    <v:String x:Key="robotMainWinLogs_Date">Date</v:String>
+    <v:String x:Key="robotMainWinLogs_Time">Time</v:String>
+    <v:String x:Key="robotMainWinLogs_Message">Message</v:String>
+
+    <!--#endregion-->
+
+    <!--#region Журнал стратегии-->
+
+    <v:String x:Key="robotMainWinLogsStratetgy_Date">Date</v:String>
+    <v:String x:Key="robotMainWinLogsStratetgy_Time">Time</v:String>
+    <v:String x:Key="robotMainWinLogsStratetgy_Account">Account</v:String>
+    <v:String x:Key="robotMainWinLogsStratetgy_Name">Name</v:String>
+    <v:String x:Key="robotMainWinLogsStratetgy_Message">Massage</v:String>
+
+    <!--#endregion-->
+
+    <!--#region Deals-->
+
+    <v:String x:Key="robotMainWinDeals_Type">Type</v:String>
+    <v:String x:Key="robotMainWinDeals_Direction">Direction</v:String>
+    <v:String x:Key="robotMainWinDeals_Instrument">Symbol</v:String>
+    <v:String x:Key="robotMainWinDeals_Date">Date</v:String>
+    <v:String x:Key="robotMainWinDeals_Time">Time</v:String>
+    <v:String x:Key="robotMainWinDeals_BarOpen">Bar open</v:String>
+    <v:String x:Key="robotMainWinDeals_Qty">Qty</v:String>
+    <v:String x:Key="robotMainWinDeals_PriceOpenSignal">Price open(signal)</v:String>
+    <v:String x:Key="robotMainWinDeals_PriceOpenFact">Price open(fact)</v:String>
+    <v:String x:Key="robotMainWinDeals_SignalOpen">Signal open</v:String>
+    <v:String x:Key="robotMainWinDeals_DateExit">Date</v:String>
+    <v:String x:Key="robotMainWinDeals_TimeExit">Time</v:String>
+    <v:String x:Key="robotMainWinDeals_BarExit">Bar exit</v:String>
+    <v:String x:Key="robotMainWinDeals_PriceExitSignal">Price exit(signal)</v:String>
+    <v:String x:Key="robotMainWinDeals_PriceExitFact">Price exit(fact)</v:String>
+    <v:String x:Key="robotMainWinDeals_SignalExit">Signal exit</v:String>
+    <v:String x:Key="robotMainWinDeals_ProfitLoss">P/L</v:String>
+    <v:String x:Key="robotMainWinDeals_ProfitLossPercent">P/L%</v:String>
+    <v:String x:Key="robotMainWinDeals_ProftiLossFact">P/L(fact)</v:String>
+    <v:String x:Key="robotMainWinDeals_ProftiLossPercentFact">P/L%(fact)</v:String>
+    <v:String x:Key="robotMainWinDeals_Comision">Comission</v:String>
+    <v:String x:Key="robotMainWinDeals_CommonProfitLoss">Common P/L</v:String>
+    <v:String x:Key="robotMainWinDeals_CoomonProfitLossFact">Common P/L(fact)</v:String>
+
+    <!--#endregion-->
+
+    <!--#region Статистика за день-->
+
+    <v:String x:Key="robotMainWinDayStatistic_ActiveRisk">Active Risk</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_CurrentDeposit">Current deposit</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_Deals">Deals</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgSlippageOpen">Avg slippage open</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgSlippageClose">Avg slippage close</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_Plan">plan </v:String>
+    <v:String x:Key="robotMainWinDayStatistic_Fact">fact </v:String>
+    <v:String x:Key="robotMainWinDayStatistic_ProfitLoss">Profit/Loss (P/L)</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_MaxDrowDawn">Max drowDawn</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_MaxProfit">Max profit</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgProfitLoss">Avg P/L</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgProfitLossPercent">Avg P/L, %</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_ProfitDeals">Profit deals</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_ProfitDealsSeries">Series (current/max)</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_LossDeals">Loss deals</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_LossDealsSeries">Series (current/max)</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_CommonProfit">Common profit</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgProfit">Avg profit</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgProfitPercents">Avg profit %</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_CommonLoss">Common loss</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgLoss">Avg loss</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgLossPercents">Avg loss %</v:String>
+
+
+    <!--#endregion-->
+
+    <!--#endregion-->
+
+</ResourceDictionary>
+
+
+

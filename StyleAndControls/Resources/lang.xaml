@@ -1,0 +1,511 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:v="clr-namespace:System;assembly=mscorlib">
+    
+    <!--#region MainWindow -->
+    
+    <v:String x:Key="m_MnitMainConnections">Соединение</v:String>
+    <v:String x:Key="m_MnitMainConnect">Установить соединение</v:String>
+    <v:String x:Key="m_MnitMainDisconnect">Разорвать соединение</v:String>
+        <v:String x:Key="m_MnitMainRegistrationAuthorization">Авторизация/Регистрация</v:String>
+        <v:String x:Key="m_MnitMainTerminals">Терминалы</v:String>
+        <v:String x:Key="m_MnitMainSettingsProxyCryptoexchanges">Настройки Proxy (Криптобиржи)</v:String>
+    <v:String x:Key="m_MnitMainExit">Выход</v:String>
+    <v:String x:Key="m_MnitMainTools">Инструменты</v:String>
+    <v:String x:Key="m_MnitMainStratetgies">Стратегии</v:String>
+    <v:String x:Key="m_MnitMainManageRobots">Управление роботами</v:String>
+    <v:String x:Key="m_MnitMainManageScaners">Управление сканерами</v:String>
+    <v:String x:Key="m_MnitMainRobotsPortfel">Портфели роботов</v:String>
+    <v:String x:Key="m_MnitMainTesting">Тестирование</v:String>
+    <v:String x:Key="m_MnitMainPortfelTesting">Портфельное тестирование</v:String>
+    <v:String x:Key="m_MnitMainForvardTesting">Форвардное тестирование</v:String>
+    <v:String x:Key="m_MnitMainSourceData">Источники данных</v:String>
+    <v:String x:Key="m_MnitMainStoragesData">Хранилище данных</v:String>
+    <v:String x:Key="m_MnitMainModuls">Модули</v:String>
+    <v:String x:Key="m_MnitMainArbitration">Арбитраж</v:String>
+    <v:String x:Key="m_MnitMainPairTrading">Парный трейдинг</v:String>
+    <v:String x:Key="m_MnitMainApplicationGrid">Сетка заявок</v:String>
+    <v:String x:Key="m_MnitMainLeveledStrategies">Уровневые стратегии</v:String>
+    <v:String x:Key="m_MnitMainCandlestickLevels">Свечные уровни</v:String>
+    <v:String x:Key="m_MnitMainPatterns">Паттерны</v:String>
+    <v:String x:Key="m_MnitMainManagerTools">Инструменты управляющего</v:String>
+    <v:String x:Key="m_MnitMainCopierOfDeals">Копировщик сделок</v:String>
+    <v:String x:Key="m_MnitMainDriveUnitTM">Привод ДУ</v:String>
+    <v:String x:Key="m_MnitMainCryptoPortfolio">Криптопортфель</v:String>
+    <v:String x:Key="m_MnitMainRiskManagement">Риск менеджмент</v:String>
+    <v:String x:Key="m_MnitMainRiskManager">Риск менеджер</v:String>
+    <v:String x:Key="m_MnitMainHitchhikers">Автостопы</v:String>
+    <v:String x:Key="m_MnitMainInformationWindow">Информационное окно</v:String>
+    <v:String x:Key="m_MnitMainTables">Таблицы</v:String>
+    <v:String x:Key="m_MnitMainTableCurrentParam">Таблица текущих параметров</v:String>
+    <v:String x:Key="m_MnitMainTablePositionShare">Таблица позиций по акциям</v:String>
+    <v:String x:Key="m_MnitMainTablePositionFutures">Таблица позиций по фьючерсам</v:String>
+    <v:String x:Key="m_MnitMainTableLimitsOnShares">Таблица лимитов по акциям</v:String>
+    <v:String x:Key="m_MnitMainTableimitsOnFutures">Таблица лимитов по фьючерсам</v:String>
+    <v:String x:Key="m_MnitMainTableDeals">Таблица сделок</v:String>
+    <v:String x:Key="m_MnitMainTableOrders">Таблица заявок</v:String>
+    <v:String x:Key="m_MnitMainTableStopOrders">Таблица стоп-заявок</v:String>
+    <v:String x:Key="m_MnitMainTableGlass">Стакан</v:String>
+    <v:String x:Key="m_MnitMainTableNotice">Уведомления</v:String>
+    <v:String x:Key="m_MnitMainSetting">Настройки</v:String>
+    <v:String x:Key="m_MnitMainSettingBase">Основные</v:String>
+    <v:String x:Key="m_menu_Language">Язык</v:String>
+    <v:String x:Key="m_MnitMainSettingTerminals">Терминалы</v:String>
+    <v:String x:Key="m_MnitMainSettingSaveSetting">Сохранить настройки</v:String>
+    <v:String x:Key="m_MnitMainSettingManageLicense">Управление лицензиями</v:String>
+    <v:String x:Key="m_MnitMainSettingCheckLicense">Проверить лицензию</v:String>
+    <v:String x:Key="m_MnitMainSettingRedeemLicenseCode">Активировать лицензионный код</v:String>
+    <v:String x:Key="m_MnitMainSettingOpenFolderWithLogs">Открыть папку с логами</v:String>
+    <v:String x:Key="m_MnitMainSettingOpenFolderWithStratetgies">Открыть папку со стратегиями</v:String>
+    <v:String x:Key="m_MnitMainSettingOpenSettingsFolder">Открыть папку с настройками</v:String>
+    <v:String x:Key="m_MnitMainHelp">Справка</v:String>
+    <v:String x:Key="m_MnitMainHelpInstruction">Инструкция</v:String>
+    <v:String x:Key="m_MnitMainHelpInstructionOnline">Инструкция онлайн</v:String>
+    <v:String x:Key="m_MnitMainHelpInstructionVideo">Видео инструкция</v:String>
+    <v:String x:Key="m_MnitMainHelpComplaintsAndOffers">Жалобы и Предложения</v:String>
+    <v:String x:Key="m_MnitMainHelpCheckUpdate">Проверить обновления</v:String>
+    <v:String x:Key="m_MnitMainHelpAbout">О программе</v:String>
+    
+    <!--#endregion-->
+
+    <!--#region Роботы -->
+    
+    <v:String x:Key="robotMainWinOpenPos_OpenPos">Открытые позиции</v:String>
+    <v:String x:Key="robotMainWinLogs">Журнал</v:String>
+    <v:String x:Key="robotMainWinLogsStratetgy">Журнал стратегии</v:String>
+    <v:String x:Key="robotMainWinDeals">Сделки</v:String>
+    <v:String x:Key="robotMainWinDayStatistic">Статистика за день</v:String>
+
+    <!--#region меню -->
+
+    <v:String x:Key="robotMainWinMenu_StartCheckRobots">Запуск всех роботов</v:String>
+    <v:String x:Key="robotMainWinMenu_StopCheckRobots">Остановка всех роботов</v:String>
+    <v:String x:Key="robotMainWinMenu_AddRobotEdit">Добавление/Настройка робота</v:String>
+    <v:String x:Key="robotMainWinMenu_CopyRobots">Копировать отмеченных роботов</v:String>
+    <v:String x:Key="robotMainWinMenu_DelRobots">Удалить отмеченных роботов</v:String>
+    <v:String x:Key="robotMainWinMenu_Chart">График</v:String>
+    <v:String x:Key="robotMainWinMenu_Version">Версия</v:String>
+    <v:String x:Key="robotMainWinMenu_AllPosHistory">Сделать все позиции историческими</v:String>
+    <v:String x:Key="robotMainWinMenu_AllPosReal">Сделать все позиции реальными</v:String>
+    <v:String x:Key="robotMainWinMenu_ClearPos">Сбросить позиции</v:String>
+    <v:String x:Key="robotMainWinMenu_ClearPosAndStop">Сбросить позиции и остановить</v:String>
+    <v:String x:Key="robotMainWinMenu_KillAndClose">Снять и закрыть</v:String>
+    <v:String x:Key="robotMainWinMenu_KillAndCloseAndStop">Снять, закрыть и остановить</v:String>
+    <v:String x:Key="robotMainWinMenu_GroupAction">Групповые действия</v:String>
+
+    <!--#endregion-->
+
+    <!--#region меню -->
+
+    <v:String x:Key="robotMainWinContextMenu_AddRobot">Добавить робота</v:String>
+    <v:String x:Key="robotMainWinContextMenu_EditRobot">Редактировать робота</v:String>
+    <v:String x:Key="robotMainWinContextMenu_CopyRobot">Копировать робота</v:String>
+    <v:String x:Key="robotMainWinContextMenu_DelRobot">Удалить робота</v:String>
+
+    <!--#endregion-->
+
+
+    <!--#region Роботы главное окно -->
+
+    <v:String x:Key="robotMainWin_onOff">Вкл/Выкл</v:String>
+    <v:String x:Key="robotMainWin_Name">Название</v:String>
+    <v:String x:Key="robotMainWin_Instr">Инструмент</v:String>
+    <v:String x:Key="robotMainWin_Price">Цена</v:String>
+    <v:String x:Key="robotMainWin_LastChange">Посл. изм.</v:String>
+    <v:String x:Key="robotMainWin_Pos">Позиция</v:String>
+    <v:String x:Key="robotMainWin_ProfitLoss">П/У</v:String>
+    <v:String x:Key="robotMainWin_ProfitLossFact">П/У (факт.)</v:String>
+    <v:String x:Key="robotMainWin_Deals">Сделок</v:String>
+    <v:String x:Key="robotMainWin_Portfel">Портфель</v:String>
+    <v:String x:Key="robotMainWin_ClientCode">Код клиента</v:String>
+    <v:String x:Key="robotMainWin_RegimTorg">Режим торгов</v:String>
+    <v:String x:Key="robotMainWin_TypeTorg">Тип торговли</v:String>
+    <v:String x:Key="robotMainWin_Qty">Количество</v:String>
+    <v:String x:Key="robotMainWin_TrubleRobot">Причины бездействия робота</v:String>
+    
+
+    <!--#endregion-->
+
+    <!--#region Открытые позиции -->
+
+    <v:String x:Key="robotMainWinOpenPos_Type">Тип</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Date">Дата</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Time">Время</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Operation">Операция</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Lots">Лоты</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Filled">Исполнено</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Status">Статус</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Number">Номер</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Price">Цена</v:String>
+    <v:String x:Key="robotMainWinOpenPos_TrallingProfit">Треллинг профит</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Active">Активна</v:String>
+    <v:String x:Key="robotMainWinOpenPos_PriceActivation">Цена активации</v:String>
+    <v:String x:Key="robotMainWinOpenPos_PriceMinMax">Цена мин/макс</v:String>
+    <v:String x:Key="robotMainWinOpenPos_PriceFilled">Цена исполнения</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Close">Закрытие</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Profit">Профит</v:String>
+    <v:String x:Key="robotMainWinOpenPos_Stop">Стоп</v:String>
+    <v:String x:Key="robotMainWinOpenPos_AddInfo">Доп. инфо</v:String>
+
+    <!--#endregion-->
+
+    
+    
+    <!--#region Журнал -->
+
+    <v:String x:Key="robotMainWinLogs_Date">Дата</v:String>
+    <v:String x:Key="robotMainWinLogs_Time">Время</v:String>
+    <v:String x:Key="robotMainWinLogs_Message">Сообщение</v:String>
+
+    <!--#endregion-->
+
+    <!--#region Журнал стратегии-->
+
+    <v:String x:Key="robotMainWinLogsStratetgy_Date">Дата</v:String>
+    <v:String x:Key="robotMainWinLogsStratetgy_Time">Время</v:String>
+    <v:String x:Key="robotMainWinLogsStratetgy_Account">Счет</v:String>
+    <v:String x:Key="robotMainWinLogsStratetgy_Name">Название</v:String>
+    <v:String x:Key="robotMainWinLogsStratetgy_Message">Сообщение</v:String>
+
+    <!--#endregion-->
+
+    <!--#region Deals-->
+
+    <v:String x:Key="robotMainWinDeals_Type">Тип</v:String>
+    <v:String x:Key="robotMainWinDeals_Direction">Направление</v:String>
+    <v:String x:Key="robotMainWinDeals_Instrument">Инструмент</v:String>
+    <v:String x:Key="robotMainWinDeals_Date">Дата</v:String>
+    <v:String x:Key="robotMainWinDeals_Time">Время</v:String>
+    <v:String x:Key="robotMainWinDeals_BarOpen">Бар вх.</v:String>
+    <v:String x:Key="robotMainWinDeals_Qty">Кол-во</v:String>
+    <v:String x:Key="robotMainWinDeals_PriceOpenSignal">Цена вх.(сигн.)</v:String>
+    <v:String x:Key="robotMainWinDeals_PriceOpenFact">Цена вх.(факт.)</v:String>
+    <v:String x:Key="robotMainWinDeals_SignalOpen">Сигнал входа</v:String>
+    <v:String x:Key="robotMainWinDeals_DateExit">Дата</v:String>
+    <v:String x:Key="robotMainWinDeals_TimeExit">Время</v:String>
+    <v:String x:Key="robotMainWinDeals_BarExit">Бар вых.</v:String>
+    <v:String x:Key="robotMainWinDeals_PriceExitSignal">Цена вых.(сигн.)</v:String>
+    <v:String x:Key="robotMainWinDeals_PriceExitFact">Цена вых.(факт.)</v:String>
+    <v:String x:Key="robotMainWinDeals_SignalExit">Сигнал выхода</v:String>
+    <v:String x:Key="robotMainWinDeals_ProfitLoss">П/У</v:String>
+    <v:String x:Key="robotMainWinDeals_ProfitLossPercent">П/У%</v:String>
+    <v:String x:Key="robotMainWinDeals_ProftiLossFact">П/У(факт.)</v:String>
+    <v:String x:Key="robotMainWinDeals_ProftiLossPercentFact">П/У%(факт)</v:String>
+    <v:String x:Key="robotMainWinDeals_Comision">Комиссия</v:String>
+    <v:String x:Key="robotMainWinDeals_CommonProfitLoss">Общий П/У</v:String>
+    <v:String x:Key="robotMainWinDeals_CoomonProfitLossFact">Общий П/У(факт.)</v:String>
+
+    <!--#endregion-->
+
+    <!--#region Статистика за день-->
+
+    <v:String x:Key="robotMainWinDayStatistic_ActiveRisk">Активный риск</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_CurrentDeposit">Текущие средства</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_Deals">Сделок</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgSlippageOpen">Ср. проскальз. open</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgSlippageClose">Ср. проскальз. close</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_Plan">план </v:String>
+    <v:String x:Key="robotMainWinDayStatistic_Fact">факт </v:String>
+    <v:String x:Key="robotMainWinDayStatistic_ProfitLoss">Прибыль/Убыток (П/У)</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_MaxDrowDawn">Макс. просадка</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_MaxProfit">Макс. прибыль</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgProfitLoss">Средний П/У</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgProfitLossPercent">Средний П/У, %</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_ProfitDeals">Прибыльных сделок</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_ProfitDealsSeries">Подряд (тек./макс.)</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_LossDeals">Убыточных сделок</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_LossDealsSeries">Подряд (тек./макс.)</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_CommonProfit">Общая прибыль</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgProfit">Ср. прибыль</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgProfitPercents">Ср. прибыль %</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_CommonLoss">Общий убыток</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgLoss">Ср. убыток</v:String>
+    <v:String x:Key="robotMainWinDayStatistic_AvgLossPercents">Ср. убыток %</v:String>
+
+    <!--#endregion-->
+
+    <!--#endregion-->
+
+    <!--#region basic settings-->
+
+    <v:String x:Key="BasicSettingsBasicSettings">Основные настройки</v:String>
+    <!--// Общие-->
+    <v:String x:Key="BasicSettingsGeneral">Общие</v:String>
+    <v:String x:Key="BasicSettingsCheckForUpdatesAutomatically">Проверять обновления автоматически настройки</v:String>
+    <v:String x:Key="BasicSettingsCheckForUpdatesAutomaticallyTooltip">Автоматическая проверка версий при открытии программы</v:String>
+    <v:String x:Key="BasicSettingsCheckingForUpdatesByTestVersions">Проверка обновлений по тестовым версиям</v:String>
+    <v:String x:Key="BasicSettingsCheckingForUpdatesByTestVersionsTooltip">В тестовых версиях могут содержаться новые возможности программы, которые в текущий момент проходят тестирование</v:String>
+    <v:String x:Key="BasicSettingsSaveDealsInTheRobot">Сохранять сделки в роботе</v:String>
+    <v:String x:Key="BasicSettingsSaveDealsInTheRobotTooltip">Сделки в роботе хранятся до тех пор, пока по нему не будет критических изменений</v:String>
+    <!--// - Quik-->
+    <v:String x:Key="BasicSettingsQuik">Quik</v:String>
+    <v:String x:Key="BasicSettingsQuikAutogeneration">Автогенерация</v:String>
+    <v:String x:Key="BasicSettingsQuikАTool">Инструмент</v:String>
+    <v:String x:Key="BasicSettingsQuikАToolTooltip">Автоматически сгенерировать DDE каналы по инструментам, транслирующихся из квика</v:String>
+    <v:String x:Key="BasicSettingsQuikАDDEGlassChannel">DDE канал для стакана</v:String>
+    <!--// - CGate (Plaza2)-->
+    <v:String x:Key="BasicSettingsCGatePlaza2">CGate (Plaza2)</v:String>
+    <v:String x:Key="BasicSettingsCGatePlaza2Reconnection">Востановление соединения</v:String>
+    <v:String x:Key="BasicSettingsCGatePlaza2ReconnectionTooltip">Указывается локальное время компьютера</v:String>
+    <!--// - зарубежные инструменты-->
+    <v:String x:Key="BasicSettingsForeignInstruments">Зарубежные инструменты</v:String>
+    <!--// - - Кнопка добавить-->
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonTooltip">Добавление нового инструмента</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonWindow">!!!</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonToolCode">Код инструмента</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonToolCodeTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonToolType">Тип инструмента</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonToolTypeTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonExchaange">Exchaange</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonExchaangeTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonPrimaryExchaange">PrimaryExchaange</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonPrimaryExchaangeTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonExpirationDate">ExpirationDate</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonExpirationDateTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonPriceStep">Шаг цены</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonPriceStepTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonGP">ГО</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonGPTooltip">Гарантийное обеспечение</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonQuotation">Котировка</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsAddButtonQuotationTooltip">Price Quotation. Данное поле заполняется, если фьючерсный или другой контракт имеет не стандартное вычисление стоимости и неполную шкалу по цене (пример по ZB 148000-148320, далее еще повышение на один так даст котировку 149000). Пример контракт ZB - Points ($1,000) and 1/32 of a point. For example, 134-16 represents 134 16/32. Par is on the basis of 100 points.В этом случае выбирается 1/32 "</v:String>
+    <!--// - - Кнопка Удалить-->
+    <v:String x:Key="BasicSettingsForeignInstrumentsDeleteButtonTooltip">Удалить отмечанные инструменты</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsDeleteButtonWindow">Внимание</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsDeleteButtonWindowMessage">Вы действительно хотите УДАЛИТЬ отмеченный инструмент(инструменты)?</v:String>
+    <!--// - - таблица инструментов-->
+    <v:String x:Key="BasicSettingsForeignInstrumentsTickerCode">Код тикера</v:String>
+    <!--// - - Тип Валюта Биржа в common-->
+    <v:String x:Key="BasicSettingsForeignInstrumentsExpirationDate">Дата экспирации</v:String>
+    <v:String x:Key="BasicSettingsForeignInstrumentsPriceStep">Шаг цены</v:String>
+    <!--// - - ГО в кнопке добавить
+	// Уведомления-->
+    <v:String x:Key="BasicSettingsNotifications">Уведомления</v:String>
+    <v:String x:Key="BasicSettingsName">Название</v:String>
+    <v:String x:Key="BasicSettingsMessages">Сообщения</v:String>
+    <v:String x:Key="BasicSettingsAlert">Оповещения</v:String>
+    <v:String x:Key="BasicSettingsEmail">E-mail</v:String>
+    <v:String x:Key="BasicSettingsTelegram">Telegram</v:String>
+    <v:String x:Key="BasicSettingsConnectionEstablished">Соединение установленно</v:String>
+    <v:String x:Key="BasicSettingsLostConnection">Соединение потеряно</v:String>
+    <v:String x:Key="BasicSettingsPositionOpening">Открыытие позиции</v:String>
+    <v:String x:Key="BasicSettingsClosingPosition">Закрытие позиции</v:String>
+    <v:String x:Key="BasicSettingsSignalsScript">Сигналы из скрипта</v:String>
+    <v:String x:Key="BasicSettingsTransactions">Транзакции</v:String>
+    <v:String x:Key="BasicSettingsRobotLogs">Журналы роботов</v:String>
+    <v:String x:Key="BasicSettingsImportantMessage">Важные сообщение</v:String>
+    <v:String x:Key="BasicSettingsTradeStatistics">Торговая статистика</v:String>
+    <!--// - Оповещения  все выше
+	// - E-mail-->
+    <v:String x:Key="BasicSettingsNotificationsEmailSenderMail">Почта отправителя</v:String>
+    <v:String x:Key="BasicSettingsNotificationsEmailSenderMailTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsNotificationsEmailSenderPassword">Пароль отправителя</v:String>
+    <v:String x:Key="BasicSettingsNotificationsEmailSenderPasswordTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsNotificationsEmailOutgoingMailServer">Сервер исходящей почты (SMTP)</v:String>
+    <v:String x:Key="BasicSettingsNotificationsEmailOutgoingMailServerTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsNotificationsEmailServerPort">Порт(SMTP)-сервера</v:String>
+    <v:String x:Key="BasicSettingsNotificationsEmailServerPortм">!!!</v:String>
+    <v:String x:Key="BasicSettingsNotificationsEmailRecipientMail">Почта получателя</v:String>
+    <v:String x:Key="BasicSettingsNotificationsEmailRecipientMailTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsNotificationsEmailSSL">Использовать SSL</v:String>
+    <v:String x:Key="BasicSettingsNotificationsEmailSSLTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsNotificationsEmailTestLetter">Тестовое письмо</v:String>
+    <v:String x:Key="BasicSettingsNotificationsEmailTestLetterTooltip">!!!</v:String>
+    <!--// - Telegram-->
+    <v:String x:Key="BasicSettingsNotificationsTelegramToken">Токен</v:String>
+    <v:String x:Key="BasicSettingsNotificationsTelegramTokenTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsNotificationsTelegramUser">Пользователь</v:String>
+    <v:String x:Key="BasicSettingsNotificationsTelegramUserTooltip">!!!</v:String>
+    <!--// - Обновить в разделе common-->
+    <v:String x:Key="BasicSettingsNotificationsTelegramUseProxy">Исп.proxy</v:String>
+    <v:String x:Key="BasicSettingsNotificationsTelegramUseProxyTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsNotificationsTelegramMessage">Сообщение</v:String>
+    <v:String x:Key="BasicSettingsNotificationsTelegramMessageTooltip">!!!</v:String>
+    <!--// Торговля-->
+    <v:String x:Key="BasicSettingsTrade">Торговля</v:String>
+    <v:String x:Key="BasicSettingsTradePreTradeRange">Предторговый диапазон</v:String>
+    <v:String x:Key="BasicSettingsTradePreTradeRangeTooltip">Количество свечей/баров, по которым идет перерасчет при запуске/перезапуске робота</v:String>
+    <v:String x:Key="BasicSettingsTradeRobotSaveInterval">Интервал сохранентя роботов</v:String>
+    <v:String x:Key="BasicSettingsTradeRobotSaveIntervalTooltip">Время в минутах, по прошествию которого с начала запуска ЕТС или после последнего сохранения, будет произведено сохранение данных по роботам</v:String>
+    <v:String x:Key="BasicSettingsTradeSignalDisplayInSemiAutomaticMode">Отображение сигнала при полуавтоматическом режиме</v:String>
+    <v:String x:Key="BasicSettingsTradeSignalDisplayInSemiAutomaticModeTooltip">Время отображение сигналов при полуавтоматическом режиме</v:String>
+    <v:String x:Key="BasicSettingsTradeApplicationsExecuted">В полуавтоматическом режиме заявки считаются исполнены после удаления из списка</v:String>
+    <v:String x:Key="BasicSettingsTradeApplicationsExecutedTooltip">Из списка заявка удаляется после подтверждения транзакции, отмены или после истечения времени отображения</v:String>
+    <v:String x:Key="BasicSettingsTradeStrategyCheckFrequency">Частота проверки стратегий</v:String>
+    <v:String x:Key="BasicSettingsTradeStrategyCheckFrequencyTooltip">Минимальное время, через которое условия по стратегиям будут проверены еще раз</v:String>
+    <v:String x:Key="BasicSettingsTradeShowMenuInRobots">Показывать меню в роботах для формирования таймфрейма</v:String>
+    <v:String x:Key="BasicSettingsTradeShowMenuInRobotsTooltip">Указывается малый таймфрейм, из которого собирается больший таймфрейм, необходимо для правильной предторговой эмуляции. В случае если данный пункт скрыт, то система сама подставляет наибольший возможный таймфрейм для формирования указанного таймфрейма</v:String>
+    <v:String x:Key="BasicSettingsTradeShowTimeframeSelectionMenu">Показывать меню выбора таймфрейма в индикаторах</v:String>
+    <v:String x:Key="BasicSettingsTradeShowTimeframeSelectionMenuTooltip">Возможно установить таймфрейм индикаторов отличный от таймфрейма основного графика</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderCommissionWhenCalculatingPL">Учитывать комиссию при расчете П/У</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderCommissionWhenCalculatingPLTooltip">При расчете фактической прибыли учитывается комиссия биржи и комиссия брокера</v:String>
+    <!--// - - Кнопка добавление комиссии-->
+    <v:String x:Key="BasicSettingsTradeConsiderAddButtonTooltip">Добавление комиссии</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderAddButtonWindow">Комиссия</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderAddButtonClassCode">Код класса</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderAddButtonSymbol">Инструмент</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderAddButtonTypeComis">Тип комиссии</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderAddButtonMaxСommission">Макс. комиссия</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderAddButtonAccuracyOfCalculations">Точность расчетов</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderAddButtonREPORate">Ставка РЕПО, % год</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderAddButtonAllMarkets">Все рынки</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderAddButtonAllInstruments">Все инструменты</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderAddButtonFixed">Фиксированная</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderAddButtonInterest">Проценты</v:String>
+    <v:String x:Key="BasicSettingsTradeConsiderAddButtonDoNotUse">Не использовать</v:String>
+    <!--// - - Кнопка удалить выделенные строки-->
+    <v:String x:Key="BasicSettingsTradeConsiderDeleteButton">Удалить выделенные строки</v:String>
+    <!--// - "Внимание" и текст окна в разделе зарубежные инструменты
+	// Тестирование-->
+    <v:String x:Key="BasicSettingsTesting">Тестирование</v:String>
+    <v:String x:Key="BasicSettingsTestingCandleNumber">Начинать тест со свечи №</v:String>
+    <v:String x:Key="BasicSettingsTestingCandleNumberTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsTestingNumberOfCandles">Количество свечей отображаемое на графике</v:String>
+    <v:String x:Key="BasicSettingsTestingNumberOfCandlesTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingCommission">Учитывать комиссию при тестировании</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingCommissionTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingCommissionСontractLot">Комиссия на один контракт/лот</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingCommissionСontractLotTooltip">Абсолютная комиссия в пунктах цены. Используется для фьючерсов и опционов</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingIndividualCommission">Использовать индивидуальную комиссию</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingIndividualCommissionTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingSlipInDough">Учитывать проскальзывание при тестировании</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingSlipInDoughTooltip">Позволяет учитывать в результатах тестирования проскальзывание, которое может быть при реальной торговле</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingSlipInSteps">Проскальзывание, в шагах цены на одну сторону</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingSlipInStepsTooltip">Проскальзывание учитывается для обеих сторон сделки: открытия и закрытия позиции</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingIndividualSlipInSteps">Использовать индивидуальное проскальзывание</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingIndividualSlipInStepsTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingSlipInStepBeStep">Отображать режим пошагового тестирования</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingSlipInStepBeStepTooltip">Позволяет протестировать стратегию шаг за шагом с посотроением графика в реальном времени</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingRiskFreeSharpe">Безрисковая ставка для расчета коэф. шарпа, %</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingRiskFreeSharpeTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingRepoRate">Ставка РЕПО, % годовых</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingRepoRateTooltip">Ставка, под которую даются в займы акции для совершенения операций в шорт. Плата взимается, если акции переносятся на следующий день</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingTestTool">Закрепить инструмент для тестов</v:String>
+    <v:String x:Key="BasicSettingsTestingTestingTestToolTooltip">Смена инструмента в тесте происходит только на активной вкладке</v:String>
+    <!--// - оптимизация-->
+    <v:String x:Key="BasicSettingsTestingOptimization">Оптимизация</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationSelectionParameters">Парметры отбора</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationSelectionParametersTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationNormalize">Нормализовать итоговую оценку от максимума весов</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationNormalizeTooltip">Если галочка снята, то нормализация идет от максимального значения Оценки</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationName">Наименование</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationValue">Значение</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationWeight">Вес</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationAnnualProfit">Годовая прибыль, %</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationAnnualProfitTooltip">Общая прибыль по стратегии. Стратегия проходит форвардный анализ, если данный параметр будет больше указанного значения</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationSharpeRatio">Коэффициент Шарпа</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationSharpeRatioTooltip">Коэффициент Шарпа используется для определения того, насколько хорошо доходность актива компенсирует принимаемый инвестором риск. 
+                                                                        При сравнении двух активов с одинаковым ожидаемым доходом, вложение в актив с более высоким коэффициентом Шарпа будет менее рискованным.
+                                                                        Коэффициент Шарпа должен быть равен одному или выше. Тогда считается, что стратегия, которую анализируем, работает с достаточной эффективностью.
+                                                                        Значение больше трех уже говорит о том, что вероятность получения убытка в каждой сделке меньше 1%. 
+                                                                        И чем больше полученное значение, тем лучше.</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationDeals">Сделок</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationDealsTooltip">Общее количество сделок по стратегии. 
+                                                                    Стратегия проходит форвардный анализ, если данный параметр будет больше указанного значения</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationProfitableDeals">Прибыльных сделок, %</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationProfitableDealsTooltip">Процент прибыльных сделок по стратегии. 
+                                                                    Стратегия проходит форвардный анализ, если данный параметр будет больше указанного значения</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationDrawdown">Просадка, %</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationDrawdownTooltip">Максимальная просадка по стратегии. 
+                                                                    Стратегия проходит форвардный анализ, если данный параметр будет не больше указанного значения</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationProfitPerTrade">Средняя прибыль на сделку, %</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationProfitPerTradeTooltip">Средняя прибыль в процентах на сделку по стратегии. 
+                                                                    Стратегия проходит форвардный анализ, если данный параметр будет больше указанного значения</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationRecoveryFactor">Фактор восстановления</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationRecoveryFactorTooltip">Фактор восстановления по стратегии. 
+                                                                    Стратегия проходит форвардный анализ, если данный параметр будет больше указанного значения</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationProfitFactor">Профит фактор</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationProfitFactorTooltip">Профит фактор по стратегии. 
+                                                                    Стратегия проходит форвардный анализ, если данный параметр будет больше указанного значения</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationDefaultSettings">Настройки по умолчанию</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationCustomScript">Пользовательский скрипт</v:String>
+    <v:String x:Key="BasicSettingsTestingOptimizationCustomScriptTooltip">Скрипт, для расчета дополнительных параметров статистики</v:String>
+    <!--// Форвард-->
+    <v:String x:Key="BasicSettingsForward">Форвард</v:String>
+    <v:String x:Key="BasicSettingsForwardNumberOfResults">Количество результатов</v:String>
+    <v:String x:Key="BasicSettingsForwardNumberOfResultsTooltip">Количество выводимых результатов удовлетворяющих выборке</v:String>
+    <v:String x:Key="BasicSettingsForwardStoreCalculations">Хранить в памяти все расчеты</v:String>
+    <v:String x:Key="BasicSettingsForwardStoreCalculationsTooltip">В памяти сохраняются данные по кривой доходности и сделками, изменения значений и весов применяются сразу. Объем потребляемой памяти увеличивается</v:String>
+    <v:String x:Key="BasicSettingsForwardForwardTestSettings">Настройки анализа форвордного теста</v:String>
+    <v:String x:Key="BasicSettingsForwardTestingPeriod">Период тестирования</v:String>
+    <v:String x:Key="BasicSettingsForwardTestingPeriodTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsForwardForwardPeriod">Период форварда</v:String>
+    <v:String x:Key="BasicSettingsForwardForwardPeriodTooltip">!!!</v:String>
+    <!--// месяц неделя день в common-->
+    <v:String x:Key="BasicSettingsForwardOptionsTooltip">Парметры выбора система для форвардного анализа</v:String>
+    <v:String x:Key="BasicSettingsForwardNormalizeFromMaximum">Нормализовать итоговую оценку от максимума весов</v:String>
+    <v:String x:Key="BasicSettingsForwardNormalizeFromMaximumTooltip">Если галочка снята, то нормализация идет от максимального значения Оценки</v:String>
+    <!--//наименование, значение, вес, годовая прибыль,коэффицент Шарпа, сделок, прибыльных сделок, просадка, средняя прибыль не сделку, фактор востановления,   профит фактор, Пользовательский скрипт в разделе оптимизация-->
+    <v:String x:Key="BasicSettingsForwardProfitableTests">Прибыльных тестов, %</v:String>
+    <v:String x:Key="BasicSettingsForwardProfitableTestsTooltip">Процент прибыльных тестовых периодов. 
+                                                                    Стратегия проходит форвардный анализ, если данный параметр будет больше указанного значения</v:String>
+    <v:String x:Key="BasicSettingsForwardDrawdownRatio">Коэффициент просадки</v:String>
+    <v:String x:Key="BasicSettingsForwardDrawdownRatioTooltip">Средняя просадка при торговле не будет больше тестовой умноженной на указанный коэффициент.
+                                                                        Например:
+                                                                        Среднее максимальное проседание в течение оптимизации было 10000 при максимуму 18000 и минимуме 6500.
+                                                                        Модель, постоптимизационное проседание которой превышает 150% оптимизационного проседания, 
+                                                                        дает повод для беспокойства. Следовательно, один из показателей риска – это среднее оптимизационное проседание, 
+                                                                        умноженное на коэффициент (1,5) = 15000. Это число более значимое, потому что оно основано на результатах
+                                                                        различных оптимизаций, охватывающих несколько разных периодов истории.
+                                                                        Стратегия проходит форвардный анализ, если данный параметр будет больше указанного значения</v:String>
+    <v:String x:Key="BasicSettingsForwardForwardEfficiency">Форвардная эффективность, %</v:String>
+    <v:String x:Key="BasicSettingsForwardForwardEfficiencyTooltip">Форвардная эффективность (WFE) - это отношение средних годовых форвардных чистых прибыли и убытка к 
+                                                                    средним годовым оптимизированным чистым прибыли и убытку.
+                                                                    Стратегия проходит форвардный анализ, если данный параметр будет больше указанного значения</v:String>
+    <v:String x:Key="BasicSettingsForwardIncomeToRiskRatio">Отношение доход к риску</v:String>
+    <v:String x:Key="BasicSettingsForwardIncomeToRiskRatioTooltip">Критерий риска - среднее значение, отношение прибыли к просадке оптимизационных окон
+                                                                          Стратегия проходит форвардный анализ, если данный параметр будет больше указанного значения</v:String>
+    <!--//	График Chart-->
+    <v:String x:Key="BasicSettingsChart">График</v:String>
+    <v:String x:Key="BasicSettingsChartDefaultChartType">Тип графика по умолчанию</v:String>
+    <v:String x:Key="BasicSettingsChartDefaultChartTypeTooltip">При открытии графика по умолчанию будут либо отображаться свечи или бары</v:String>
+    <!--// бары свечи в common-->
+    <v:String x:Key="BasicSettingsChartCandlesticksForRobotCharts">Свечей для графиков роботов</v:String>
+    <v:String x:Key="BasicSettingsChartCandlesticksForRobotChartsTooltip">Количество свечей, видимых при построении графика для роботов торгуемых, в режиме реального времени</v:String>
+    <v:String x:Key="BasicSettingsChartVolumesOnTheChart">Показывать объемы на графике</v:String>
+    <v:String x:Key="BasicSettingsChartVolumesOnTheChartTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsChartInformationAndDebugging">Показывать информационные и отладочные таблицы справа</v:String>
+    <v:String x:Key="BasicSettingsChartInformationAndDebuggingTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsChartLongPlusColor">Цвет Long (прибыльная сделка)</v:String>
+    <v:String x:Key="BasicSettingsChartLongPlusColorTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsChartLongMinusColor">Цвет Long (убыточная сделка)</v:String>
+    <v:String x:Key="BasicSettingsChartLongMinusColorTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsChartShortPlusColor">Цвет Short (прибыльная сделка)</v:String>
+    <v:String x:Key="BasicSettingsChartShortPlusColorTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsChartShortMinusColor">Цвет Short (убыточная сделка)</v:String>
+    <v:String x:Key="BasicSettingsChartShortMinusColorTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsChartResetColors">Сбросить цвета</v:String>
+    <v:String x:Key="BasicSettingsChartResetColorsTooltip">!!!</v:String>
+    <!--// Хранилище данных  DataStore-->
+    <v:String x:Key="BasicSettingsDataStore">Хранилище данных</v:String>
+    <v:String x:Key="BasicSettingsDataStoreStorageCapacity">Объем хранения данных</v:String>
+    <v:String x:Key="BasicSettingsDataStoreStorageCapacityTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsDataStoreDoNotStoreTicks">Не хранить тики в памяти за текущую сессию</v:String>
+    <v:String x:Key="BasicSettingsDataStoreDoNotStoreTicksTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsDataStoreSettingsTimeframe">Настройки по каждому таймфрейму отдельно</v:String>
+    <v:String x:Key="BasicSettingsDataStoreSettingsTimeframeTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsDataStore1minute">1 минута</v:String>
+    <v:String x:Key="BasicSettingsDataStore5minute">5 минута</v:String>
+    <v:String x:Key="BasicSettingsDataStore10minute">10 минута</v:String>
+    <v:String x:Key="BasicSettingsDataStore15minute">15 минута</v:String>
+    <v:String x:Key="BasicSettingsDataStore30minute">30 минута</v:String>
+    <v:String x:Key="BasicSettingsDataStore60minute">60 минута</v:String>
+    <v:String x:Key="BasicSettingsDataStore120minute">120 минута</v:String>
+    <v:String x:Key="BasicSettingsDataStore240minute">240 минута</v:String>
+    <!--// день, неделя, месяц, свечей в разделе common
+	// Источники данных  DataSources-->
+    <v:String x:Key="BasicSettingsDataSources">Источники данных</v:String>
+    <v:String x:Key="BasicSettingsDataSourcesDefaultData">Настройки поставщиков данных по умолчанию</v:String>
+    <v:String x:Key="BasicSettingsDataSourcesDefaultDataTooltip">!!!</v:String>
+    <v:String x:Key="BasicSettingsDataSourcesDataStorage">Путь хранения данных в txt</v:String>
+    <v:String x:Key="BasicSettingsDataSourcesDataStorageTooltip">!!!</v:String>
+    <!--// Proxy-->
+    <v:String x:Key="BasicSettingsProxy">Proxy</v:String>
+    <v:String x:Key="BasicSettingsProxyUpdateFrequency">Частота обновления данных в секунду (Криптобиржи)</v:String>
+    <v:String x:Key="BasicSettingsProxyUpdateFrequencyTooltip">Количество запросов на обновление публичных данных по криптобиржам. Чем чаще идут запросы, тем больше прокси нужно иметь. Количество необходимых Proxy для одной биржи: (1запрос на котировки + (1 запрос на стакан + 1 запрос на тики)*количество инструментов) * количество запросов в секунду + 10% запасных прокси. Пример на для биржи Binance 5 инструментов и запрашиваем только стаканы, частота обновления данных 2 раза в секунду = (1 запрос котировок+1 запрос стакан*5 инструментов)*2 запроса=12 прокси. 
+                                                            *Исключением явлюется биржа Kucoin : 1 запрос на котировки*количество инструментов</v:String>
+
+    <!--#endregion-->
+
+
+
+</ResourceDictionary>

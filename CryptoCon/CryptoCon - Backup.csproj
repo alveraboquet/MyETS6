@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="JKorf\**" />
+    <EmbeddedResource Remove="JKorf\**" />
+    <None Remove="JKorf\**" />
+    <Page Remove="JKorf\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="MoexFF\FAST\ASTS-config-test-uat.xml" />
+    <None Remove="MoexFF\FAST\ASTS-templates-Dec21.xml" />
+    <None Remove="MoexFF\FAST\SPECTRA-config-T0.xml" />
+    <None Remove="MoexFF\FAST\SPECTRA-templates.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="MoexFF\FAST\ASTS-config-test-uat.xml" />
+    <EmbeddedResource Include="MoexFF\FAST\ASTS-templates-Dec21.xml" />
+    <EmbeddedResource Include="MoexFF\FAST\SPECTRA-config-T0.xml" />
+    <EmbeddedResource Include="MoexFF\FAST\SPECTRA-templates.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Adapter\Adapter.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FTX.Net" Version="1.0.16" />
+    <PackageReference Include="Huobi.Net" Version="4.1.8" />
+    <PackageReference Include="Kucoin.Net" Version="4.0.17" />
+    <PackageReference Include="System.Threading.Tasks.Dataflow" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Binance.Net">
+      <HintPath>Libs\Binance.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Bitfinex.Net">
+      <HintPath>Libs\Bitfinex.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Bybit.Net">
+      <HintPath>Libs\Bybit.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="CryptoExchange.Net">
+      <HintPath>Libs\CryptoExchange.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="HuobiFutures">
+      <HintPath>Libs\HuobiFutures.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>Libs\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="ScriptSolution">
+      <HintPath>Libs\ScriptSolution.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Async">
+      <HintPath>Libs\System.Linq.Async.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="StyleAndControls.Controls.ViewForOtimParam.ItemDtgdForScaner"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="UserControl" Height="140" Width="500">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid>
+            <TextBlock Cursor="Help" Foreground="White" Height="18" HorizontalAlignment="Left" Text="Инструмент" VerticalAlignment="Top" Width="120" Visibility="Collapsed"/>
+            <TextBlock Cursor="Help" Foreground="White" Height="18" Text="" VerticalAlignment="Top" Margin="260,0,0,0" Name="Txbl" Visibility="Collapsed">
+                <TextBlock.ToolTip>
+                    <ToolTip>
+                        <DockPanel Width="250" >
+                            <TextBlock TextWrapping="Wrap" Name="TxblToolTip"></TextBlock>
+                        </DockPanel>
+                    </ToolTip>
+                </TextBlock.ToolTip> 
+            </TextBlock>
+            <DataGrid IsReadOnly="False" AutoGenerateColumns="False" Name="DtgdParam"   
+                  HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="#FF4E7294" CanUserAddRows="False" CanUserDeleteRows="False" 
+                  GridLinesVisibility="Vertical" IsSynchronizedWithCurrentItem="{x:Null}" HorizontalScrollBarVisibility="Hidden" 
+                   RowHeaderWidth="0" Height="auto" VerticalAlignment="Stretch">
+
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" 
+                           Color="{Binding Path=Color, Source={x:Static SystemColors.HighlightBrush}}"/>
+                </DataGrid.Resources>
+                
+                <DataGrid.Columns>
+                    <DataGridTextColumn IsReadOnly="True" Header="Инструмент" Binding="{Binding Symbol}" SortDirection="Ascending"/>
+                    <DataGridTextColumn IsReadOnly="True" Header="Код класса" Binding="{Binding ClassCode}" />
+                    <DataGridTextColumn IsReadOnly="False" Header="Bool" Binding="{Binding ValueBool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="*" Visibility="Collapsed"/>
+                    <DataGridTextColumn IsReadOnly="False" Header="Double" Binding="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="*" Visibility="Collapsed"/>
+                    <DataGridTextColumn IsReadOnly="False" Header="Int" Binding="{Binding ValueInt, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="*" Visibility="Collapsed"/>
+                    <DataGridTextColumn IsReadOnly="False" Header="String" Binding="{Binding ValueString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="*" Visibility="Collapsed"/>
+                </DataGrid.Columns>
+              
+
+
+            </DataGrid>
+        </Grid>
+    </Grid>
+</UserControl>

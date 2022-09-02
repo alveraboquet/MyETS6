@@ -1,0 +1,23 @@
+﻿<UserControl xmlns:Controls="clr-namespace:StyleAndControls.Controls;assembly=StyleAndControls"  x:Class="SourceEts.UserConnector.UserConnectorControl.TxbxDitgitUserCon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+	x:Name="UserControl" Height="28" MinWidth="450" HorizontalAlignment="Stretch" >
+
+    <Grid x:Name="LayoutRoot">
+        <Grid>
+            <Controls:MyDitgitTexBox Margin="179,2,10,0" TextWrapping="NoWrap" Text="0" Height="24" VerticalAlignment="Top" x:Name="Txbx" IsDouble="True"/>
+            <TextBlock Cursor="Help" Foreground="White" Height="16" HorizontalAlignment="Left" Name="Txbl" VerticalAlignment="Top" Width="155" Margin="15,6,0,0" >
+                <TextBlock.ToolTip>
+                    <ToolTip>
+                        <DockPanel Width="250">
+                            <TextBlock TextWrapping="Wrap" Name="TxblToolTip"></TextBlock>
+                        </DockPanel>
+                    </ToolTip>
+                </TextBlock.ToolTip> 
+			</TextBlock>
+        </Grid>
+    </Grid>
+</UserControl>

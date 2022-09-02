@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="StyleAndControls.Controls.ViewIndikators.ViewLine"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="Auto" Width="250" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <GroupBox Name="GpbxItem" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto">
+        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="Auto" Name="StplViewLine" Margin="0,5,0,0">
+        
+        
+        </StackPanel>
+    </GroupBox>
+</UserControl>

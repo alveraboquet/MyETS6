@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonDataContract\CommonDataContract.csproj" />
+    <ProjectReference Include="..\ProviderContract\ProviderContract.csproj" />
+    <ProjectReference Include="..\SourceEts\SourceEts.csproj" />
+  </ItemGroup>
+
+</Project>

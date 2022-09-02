@@ -1,0 +1,32 @@
+﻿<UserControl
+    x:Class="TerminalRbkm.View.Table.TablePositionFutures"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+        <Grid Background="{StaticResource BackgroundBrush}">
+        <DataGrid  IsReadOnly="False" AutoGenerateColumns="False" Name="dtgdSecurities" ItemsSource="{Binding PositionFutures}"
+                  HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="#FF4E7294" CanUserAddRows="False" CanUserDeleteRows="False" 
+                  GridLinesVisibility="Vertical" IsSynchronizedWithCurrentItem="{x:Null}" 
+                   RowHeaderWidth="0" MouseDoubleClick="DtgdSecurities_OnMouseDoubleClick">
+                <DataGrid.ContextMenu>
+                    <ContextMenu >
+                        <MenuItem Name="MnitNewOrder" Header="Новая заявка" Click="MnitNewOrder_OnClick"  Height="20" Padding="1"></MenuItem>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn IsReadOnly="True" Header="Счет" Binding="{Binding ClientCode}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Код инструмента" Binding="{Binding Symbol}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Вх. чист. поз." Binding="{Binding EnterEmptyPos}" ></DataGridTextColumn>
+                    <DataGridTextColumn IsReadOnly="True" Header="Тек. длин. поз." Binding="{Binding CurrentLongPos}" ></DataGridTextColumn>
+                    <DataGridTextColumn IsReadOnly="True" Header="Тек. кор. поз." Binding="{Binding CurrentShortPos}" ></DataGridTextColumn>
+                    <DataGridTextColumn IsReadOnly="True" Header="Тек. чист. поз." Binding="{Binding Balance}" ></DataGridTextColumn>
+                    <DataGridTextColumn IsReadOnly="True" Header="На покупку" Binding="{Binding ActiveBuy}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="На продажу" Binding="{Binding ActiveSell}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Вар. маржа" Binding="{Binding VariableMarga, StringFormat=####0.##}" ></DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+</UserControl>

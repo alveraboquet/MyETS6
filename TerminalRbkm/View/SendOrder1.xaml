@@ -1,0 +1,60 @@
+﻿<Window x:Class="TerminalRbkm.View.SendOrder1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:StyleAndControls.Controls;assembly=StyleAndControls"
+        Title="Новая заявка" Height="328" Width="247" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost="True">
+    <Grid Background="{StaticResource BackgroundBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="10,13,0,0" TextWrapping="Wrap" Text="Счет" Foreground="White" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="120" Height="23" Name="CmbxAccount" SelectionChanged="CmbxAccount_SelectionChanged">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  Text="{Binding AccountClientCode}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" Text="Код класса" Foreground="White" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Right" Margin="0,38,10,0" VerticalAlignment="Top" Width="120" Height="23" Name="CmbxClassCode" SelectionChanged="CmbxClassCode_OnSelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,69,0,0" TextWrapping="Wrap" Text="Инструмент" Foreground="White" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Right" Margin="0,66,10,0" VerticalAlignment="Top" Width="120" Height="23" Name="CmbxSymbol" SelectionChanged="CmbxSymbol_OnSelectionChanged"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" IsChecked="True" Name="ChbxBuy" Click="ChbxBuy_OnClick"/>
+        <TextBlock HorizontalAlignment="Left" Margin="40,99,0,0" TextWrapping="Wrap" Text="Покупка" Foreground="LightGreen" VerticalAlignment="Top"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="112,100,0,0" VerticalAlignment="Top" Name="ChbxSell" Click="ChbxSell_OnClick"/>
+        <TextBlock HorizontalAlignment="Left" Margin="142,100,0,0" TextWrapping="Wrap" Text="Продажа" Foreground="LightCoral" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,124,0,0" TextWrapping="Wrap" Text="Текущая позиция:" Foreground="White" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="118,124,0,0" TextWrapping="Wrap" Text="" Foreground="White" VerticalAlignment="Top" Name="TxblCurPos"/>
+
+        <Button Content="C" HorizontalAlignment="Right" Margin="0,124,43,0" VerticalAlignment="Top" Width="30" Background="DeepSkyBlue" Name="BtnClose" Click="BtnClose_Click" Focusable="False">
+            <Button.ToolTip>
+                <ToolTip>
+                    <DockPanel Width="250" >
+                        <TextBlock TextWrapping="Wrap"><Run Text="Подставить объем и выбрать операцию для закрытия позиции"/></TextBlock>
+                    </DockPanel>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button Content="R" HorizontalAlignment="Right" Margin="0,124,8,0" VerticalAlignment="Top" Width="30" Background="Gold" Name="BtnRevers" Click="BtnRevers_Click" Focusable="False">
+            <Button.ToolTip>
+                <ToolTip>
+                    <DockPanel Width="250" >
+                        <TextBlock TextWrapping="Wrap"><Run Text="Подставить объем и выбрать операцию для переворота позиции"/></TextBlock>
+                    </DockPanel>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+
+        <TextBlock HorizontalAlignment="Left" Margin="10,178,0,0" TextWrapping="Wrap" Text="Лотов" Foreground="White" VerticalAlignment="Top"/>
+        <controls:MyDitgitTexBox HorizontalAlignment="Right" Margin="0,175,10,0" VerticalAlignment="Top" Width="120" Height="23" Name="TxbxQty" IsDouble="True"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,206,0,0" TextWrapping="Wrap" Text="Цена" Foreground="White" VerticalAlignment="Top" Name="TxblPrice"/>
+        <controls:MyDitgitTexBox Margin="0,203,9,0" VerticalAlignment="Top" Height="23" Name="TxbxPrice" HorizontalAlignment="Right" Width="120" IsDouble="True"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" Name="ChbxMarketPrice" Click="ChbxMarketPrice_OnClick"/>
+        <TextBlock HorizontalAlignment="Left" Margin="40,232,0,0" TextWrapping="Wrap" Text="исполнить по рыночной цене" Foreground="White" VerticalAlignment="Top"/>
+        <TextBlock Margin="118,151,10,0" TextWrapping="Wrap" Text="{Binding LastPrice}" Foreground="White" VerticalAlignment="Top" Name="TxblCurPrice" />
+
+        <Button Content="Отправить" HorizontalAlignment="Right" Margin="0,0,94,10" VerticalAlignment="Bottom" Width="79" Name="BtnSend" Focusable="False" IsDefault="True" Click="BtnSend_Click" />
+        <Button Content="Отмена" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="79" Name="BtnCancel" Focusable="False" IsCancel="True" Click="BtnCancel_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,151,0,0" TextWrapping="Wrap" Text="Текущая цена" Foreground="White" VerticalAlignment="Top" Width="99"/>
+
+    </Grid>
+</Window>
